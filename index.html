@@ -516,6 +516,8 @@
         overflow: hidden;
         transition: transform 0.3s, box-shadow 0.3s;
         position: relative;
+        display: flex;
+        flex-direction: column;
       }
 
       .pricing-card:hover {
@@ -572,6 +574,7 @@
 
       .pricing-features {
         padding: 2rem;
+        flex-grow: 1;
       }
 
       .pricing-features ul {
@@ -671,8 +674,7 @@
       }
 
       .pricing-cta {
-        padding: 1rem 2rem 2rem;
-        text-align: center;
+        margin-top: auto; /* This pushes the CTA to the bottom */
       }
 
       .cta-button {
