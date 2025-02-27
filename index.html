@@ -346,6 +346,123 @@
         }
       }
     </style>
+    <style>
+      .pricing-section {
+        padding: 5rem 0;
+        background-color: #f0f7ff;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .pricing-card {
+        background-color: var(--card-background);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card.featured {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.05);
+      }
+
+      .pricing-card.featured:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-bottom-left-radius: 8px;
+      }
+
+      .pricing-header {
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: white;
+        text-align: center;
+      }
+
+      .pricing-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .price span {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .pricing-features {
+        padding: 2rem;
+      }
+
+      .pricing-features ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .pricing-features li {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .pricing-features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+
+      .pricing-cta {
+        padding: 1rem 2rem 2rem;
+        text-align: center;
+      }
+
+      .pricing-cta .cta-button {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .pricing-card.featured {
+          transform: scale(1);
+        }
+
+        .pricing-card.featured:hover {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -792,6 +909,77 @@
         </div>
       </div>
     </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Flexible Pricing Plans</h2>
+        <p class="section-subtitle">
+          Choose the plan that best fits your organization's communication needs
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Starter Plan</h3>
+              <div class="price">$10<span>/user per month</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 50 lubricated messages per day</li>
+                <li>Core anonymization and tone enhancement</li>
+                <li>Integration with messaging platform (Slack, Teams)</li>
+                <li>Email support</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <a href="#demo" class="cta-button">Get Started</a>
+            </div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Business Plan</h3>
+              <div class="price">$20<span>/user per month</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 200 lubricated messages per day</li>
+                <li>Analytics and insights</li>
+                <li>Integration with messaging platform (Slack, Teams)</li>
+                <li>Priority support</li>
+                <li>Training with Company Knowledge Base</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <a href="#demo" class="cta-button primary">Get Started</a>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Enterprise Plan</h3>
+              <div class="price">$50<span>/user per month</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Unlimited lubricated messages</li>
+                <li>Custom anonymization and tone rules</li>
+                <li>Advanced security features (SSO, custom data retention)</li>
+                <li>Dedicated customer success manager</li>
+                <li>Full integration capabilities</li>
+                <li>On-premises option available</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <a href="#demo" class="cta-button">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS for the pricing table - add this to the style section -->
 
     <section class="cta-section" id="demo">
       <div class="container">
