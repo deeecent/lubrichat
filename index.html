@@ -788,10 +788,18 @@
           const company = document.getElementById("company").value;
           const teamSize = document.getElementById("team-size").value;
 
-          // Here you would normally send this data to your server
           console.log("Email:", email);
           console.log("Company:", company);
           console.log("Team Size:", teamSize);
+
+          const data = new FormData(e.target);
+          fetch(event.target.action, {
+            method: emailForm.method,
+            body: data,
+            headers: {
+              Accept: "application/json",
+            },
+          });
 
           // Show success message
           const modalBody = document.querySelector(".modal-body");
@@ -813,27 +821,44 @@
             setTimeout(function () {
               modalBody.innerHTML = `
                   <p>Lubrichat is coming soon! Submit your email to join our waiting list and receive a <strong>30% discount</strong> when we launch.</p>
-                  <form id="emailForm">
-                    <div class="form-group">
-                      <label for="email">Email Address</label>
-                      <input type="email" id="email" placeholder="your@email.com" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" placeholder="Your Company">
-                        </div>
-                        <div class="form-group">
-                          <label for="team-size">Approximate Team Size</label>
-                          <select id="team-size">
-                            <option value="1-10">1-10 employees</option>
-                            <option value="11-50">11-50 employees</option>
-                            <option value="51-200">51-200 employees</option>
-                            <option value="201-500">201-500 employees</option>
-                            <option value="501+">501+ employees</option>
-                            </select>
-                            </div>
-                            <button type="submit" class="submit-button">Secure My Discount</button>
-                            </form>
+            <form
+              id="emailForm"
+              action="https://formspree.io/f/xpwqvayk"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your Company"
+                />
+              </div>
+              <div class="form-group">
+                <label for="team-size">Approximate Team Size</label>
+                <select id="team-size" name="team_size">
+                  <option value="1-10">1-10 employees</option>
+                  <option value="11-50">11-50 employees</option>
+                  <option value="51-200">51-200 employees</option>
+                  <option value="201-500">201-500 employees</option>
+                  <option value="501+">501+ employees</option>
+                </select>
+              </div>
+              <button type="submit" class="submit-button">
+                Secure My Discount
+              </button>
+            </form>
                             `;
               // Reattach event listener to the new form
               document
@@ -1404,11 +1429,16 @@
             Lubrichat is coming soon! Submit your email to join our waiting list
             and receive a <strong>30% discount</strong> when we launch.
           </p>
-          <form id="emailForm">
+          <form
+            id="emailForm"
+            action="https://formspree.io/f/xpwqvayk"
+            method="POST"
+          >
             <div class="form-group">
               <label for="email">Email Address</label>
               <input
                 type="email"
+                name="email"
                 id="email"
                 placeholder="your@email.com"
                 required
@@ -1416,11 +1446,16 @@
             </div>
             <div class="form-group">
               <label for="company">Company Name</label>
-              <input type="text" id="company" placeholder="Your Company" />
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Your Company"
+              />
             </div>
             <div class="form-group">
               <label for="team-size">Approximate Team Size</label>
-              <select id="team-size">
+              <select id="team-size" name="team_size">
                 <option value="1-10">1-10 employees</option>
                 <option value="11-50">11-50 employees</option>
                 <option value="51-200">51-200 employees</option>
