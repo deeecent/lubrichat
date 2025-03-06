@@ -730,6 +730,21 @@
       margin-right: 5px;
       margin-left: -18px;
     }
+
+    /* Video container styling */
+    .video-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .video-container video {
+      width: 100%;
+      display: block;
+    }
   </style>
   <script>
     function start() {
@@ -887,7 +902,14 @@
       <a href="#demo" class="cta-button primary">Start Flowing Today</a>
     </div>
   </section>
-
+  <div class="container">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="lubrichat.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
   <section class="features" id="features">
     <div class="container">
       <h2 class="section-title">How Lubrichat Smooths Communication</h2>
