@@ -731,7 +731,55 @@
       margin-left: -18px;
     }
 
+    .use-cases {
+  padding: 5rem 0;
+  background-color: white;
+}
 
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.use-case-card {
+  background-color: var(--card-background);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.use-case-card:hover {
+  transform: translateY(-5px);
+}
+
+.use-case-icon {
+  margin-right:0.5rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.use-case-title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .use-cases {
+    padding: 3rem 0;
+  }
+  
+  .use-case-card {
+    padding: 2rem 1.5rem;
+  }
+}
   </style>
   <script>
     function start() {
@@ -888,7 +936,125 @@
     </div>
   </section>
 
+  <section class="use-cases">
+    <div class="container">
+      <h2 class="section-title">Main Use Cases</h2>
+      <p class="section-subtitle">Here's how Lubrichat removes friction from your most important conversations</p>
+      
+      <style>
+        .use-case-item {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 3rem;
+          align-items: center;
+          gap: 30px;
+        }
+        
+        .use-case-content {
+          flex: 1;
+        }
+        
+        .use-case-header {
+          display: flex;
+          align-items: center;
+        }
+        
+        .use-case-title {
+          margin: 0;
+          margin-right: 15px;
+        }
+        
+        .use-case-icon {
+          color: var(--primary-color);
+        }
+        
+        .use-case-image {
+          flex: 1;
+          max-width: 50%;
+        }
+        
+        .use-case-image img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+          .use-case-item {
+            flex-direction: column;
+            gap: 20px;
+          }
+          
+          .use-case-image {
+            max-width: 100%;
+            order: 2;
+          }
+          
+          .use-case-content {
+            order: 1;
+          }
+        }
+      </style>
+      
+      <div class="use-case-item">
+        <div class="use-case-content">
+          <div class="use-case-header">
+            <div class="use-case-icon" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <h3 class="use-case-title">Retro Facilitation</h3>
+          </div>
+          <p>Every participant's message is anonymized and made neutral, fueling constructive discussion without personality conflicts. Get to solutions faster by focusing on content, not personalities.</p>
+        </div>
+        <div class="use-case-image">
+          <img src="images/retro.png" alt="Retro facilitation in Slack">
+        </div>
+      </div>
+  
+      <div class="use-case-item">
+        <div class="use-case-content">
+          <div class="use-case-header">
+            <div class="use-case-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="use-case-title">Anonymous Feedback</h3>
+          </div>
+          <p>Tired of preparing long questionnaires? Run anonymized interactive feedback sessions with your peers and get faster to the feedback you need. Direct, honest insights without the awkwardness.</p>
+        </div>
+        <div class="use-case-image">
+          <img src="images/feedback.png" alt="Anonymous feedback interface">
+        </div>
+      </div>
+  
+      <div class="use-case-item">
+        <div class="use-case-content">
+          <div class="use-case-header">
+            <div class="use-case-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="use-case-title">Personal Assistant</h3>
+          </div>
+          <p>A tone-adjusting companion for your communication. Reduce friction in your messages, ensure clarity, and deliver your points effectively without unnecessary emotion. Perfect for high-stakes emails or sensitive conversations.</p>
+        </div>
+        <div class="use-case-image">
+          <img src="images/personal.png" alt="Personal assistant communication tool">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
+    <h2 class="section-title">Example</h2>
     <style>
       @media (max-width: 768px) {
         .comparison-container {
