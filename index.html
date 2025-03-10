@@ -1,840 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg" />
+    <title>Lubrichat</title>
+    <meta
+      property="og:logo"
+      content="https://www.lubrichat.com/images/lubrichat-social-preview.jpg"
+    />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Making Difficult Conversations Flow Smoothly" />
+    <meta
+      name="description"
+      content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense."
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg" />
-  <title>Lubrichat</title>
-  <meta property="og:logo" content="https://www.lubrichat.com/images/lubrichat-social-preview.jpg" />
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="Making Difficult Conversations Flow Smoothly" />
-  <meta name="description"
-    content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lubrichat.com/" />
+    <meta
+      property="og:title"
+      content="Making Difficult Conversations Flow Smoothly"
+    />
+    <meta
+      property="og:description"
+      content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense."
+    />
+    <meta
+      property="og:image"
+      content="https://www.lubrichat.com/images/meta-preview.gif"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.lubrichat.com/" />
-  <meta property="og:title" content="Making Difficult Conversations Flow Smoothly" />
-  <meta property="og:description"
-    content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense." />
-  <meta property="og:image" content="https://www.lubrichat.com/images/meta-preview.gif" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.lubrichat.com/" />
+    <meta
+      property="twitter:title"
+      content="Making Difficult Conversations Flow Smoothly"
+    />
+    <meta
+      property="twitter:description"
+      content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.lubrichat.com/images/meta-preview.gif"
+    />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.lubrichat.com/" />
-  <meta property="twitter:title" content="Making Difficult Conversations Flow Smoothly" />
-  <meta property="twitter:description"
-    content="No more endless debates. No forced politeness. Productive conversations without the fear of speaking up—or wasting time on nonsense." />
-  <meta property="twitter:image" content="https://www.lubrichat.com/images/meta-preview.gif" />
+    <!-- Additional SEO Meta Tags -->
+    <meta
+      name="keywords"
+      content="anonymous workplace communication, difficult conversations, employee feedback, corporate communication platform, team collaboration, organizational feedback"
+    />
+    <meta name="author" content="Lubrichat" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.lubrichat.com/" />
+    <style>
+      :root {
+        --primary-color: #2e86de;
+        --secondary-color: #0abde3;
+        --accent-color: #54a0ff;
+        --text-color: #333;
+        --light-text: #f5f5f5;
+        --background: #f9f9f9;
+        --card-background: #ffffff;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --gradient-start: #2e86de;
+        --gradient-end: #48dbfb;
+      }
 
-  <!-- Additional SEO Meta Tags -->
-  <meta name="keywords"
-    content="anonymous workplace communication, difficult conversations, employee feedback, corporate communication platform, team collaboration, organizational feedback" />
-  <meta name="author" content="Lubrichat" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.lubrichat.com/" />
-  <style>
-    :root {
-      --primary-color: #2e86de;
-      --secondary-color: #0abde3;
-      --accent-color: #54a0ff;
-      --text-color: #333;
-      --light-text: #f5f5f5;
-      --background: #f9f9f9;
-      --card-background: #ffffff;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      --gradient-start: #2e86de;
-      --gradient-end: #48dbfb;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+      body {
+        background-color: var(--background);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
 
-    body {
-      background-color: var(--background);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg,
+      header {
+        background: linear-gradient(
+          135deg,
           var(--gradient-start),
-          var(--gradient-end));
-      color: var(--light-text);
-      padding: 1.5rem 2rem;
-      box-shadow: var(--shadow);
-    }
+          var(--gradient-end)
+        );
+        color: var(--light-text);
+        padding: 1.5rem 2rem;
+        box-shadow: var(--shadow);
+      }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      align-items: center;
-    }
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        align-items: center;
+      }
 
-    .logo svg {
-      margin-right: 0.5rem;
-    }
+      .logo svg {
+        margin-right: 0.5rem;
+      }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--light-text);
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.8;
-    }
-
-    .cta-button {
-      background-color: white;
-      color: var(--primary-color);
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: var(--shadow);
-    }
-
-    .cta-button.primary {
-      background-color: #ffffff;
-      color: var(--primary-color);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .hero {
-      padding: 5rem 0;
-      background: linear-gradient(135deg,
-          var(--gradient-start),
-          var(--gradient-end));
-      color: var(--light-text);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero .cta-button {
-      padding: 0.8rem 2rem;
-      font-size: 1.1rem;
-    }
-
-    .features {
-      padding: 5rem 0;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-
-    .section-subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 3rem;
-      color: #555;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .feature-card {
-      background-color: var(--card-background);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: var(--primary-color);
-    }
-
-    .feature-title {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-
-    .testimonials {
-      padding: 5rem 0;
-      background: linear-gradient(135deg,
-          var(--gradient-start),
-          var(--gradient-end));
-      color: var(--light-text);
-    }
-
-    .example-section {
-      padding: 5rem 0;
-      background-color: #f0f7ff;
-    }
-
-    .example-card {
-      background-color: var(--card-background);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      margin-bottom: 2rem;
-    }
-
-    .example-title {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-
-    .message-exchange {
-      margin-top: 1.5rem;
-    }
-
-    .message {
-      padding: 1.2rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .message.original {
-      background-color: #f8f9fa;
-      border-left: 4px solid #e74c3c;
-    }
-
-    .message.transformed {
-      background-color: #f0f7ff;
-      border-left: 4px solid var(--primary-color);
-    }
-
-    .message p {
-      margin-bottom: 0.8rem;
-    }
-
-    .message p:last-child {
-      margin-bottom: 0;
-    }
-
-    .message strong {
-      color: var(--primary-color);
-      font-weight: 600;
-    }
-
-    .message-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .message.original .message-label {
-      color: #e74c3c;
-    }
-
-    .message.transformed .message-label {
-      color: var(--primary-color);
-    }
-
-    .cta-section {
-      padding: 5rem 0;
-      text-align: center;
-      background: linear-gradient(135deg,
-          var(--gradient-start),
-          var(--gradient-end));
-      color: var(--light-text);
-    }
-
-    .cta-section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-section p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: var(--light-text);
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 1rem 0;
-    }
-
-    .footer-links a {
-      color: var(--light-text);
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-
-    .footer-links a:hover {
-      opacity: 0.8;
-    }
-
-    .water-droplet {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    @media (max-width: 768px) {
       .nav-links {
-        display: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: var(--light-text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s;
+      }
+
+      .nav-links a:hover {
+        opacity: 0.8;
+      }
+
+      .cta-button {
+        background-color: white;
+        color: var(--primary-color);
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: var(--shadow);
+      }
+
+      .cta-button.primary {
+        background-color: #ffffff;
+        color: var(--primary-color);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero {
+        padding: 5rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: var(--light-text);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
       }
 
       .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .hero .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+      }
+
+      .features {
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        text-align: center;
         font-size: 2.2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        color: #555;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background-color: var(--card-background);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+
+      .feature-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .testimonials {
+        padding: 5rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: var(--light-text);
+      }
+
+      .example-section {
+        padding: 5rem 0;
+        background-color: #f0f7ff;
+      }
+
+      .example-card {
+        background-color: var(--card-background);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        margin-bottom: 2rem;
+      }
+
+      .example-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .message-exchange {
+        margin-top: 1.5rem;
+      }
+
+      .message {
+        padding: 1.2rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .message.original {
+        background-color: #f8f9fa;
+        border-left: 4px solid #e74c3c;
+      }
+
+      .message.transformed {
+        background-color: #f0f7ff;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .message p {
+        margin-bottom: 0.8rem;
+      }
+
+      .message p:last-child {
+        margin-bottom: 0;
+      }
+
+      .message strong {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .message-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .message.original .message-label {
+        color: #e74c3c;
+      }
+
+      .message.transformed .message-label {
+        color: var(--primary-color);
+      }
+
+      .cta-section {
+        padding: 5rem 0;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: var(--light-text);
+      }
+
+      .cta-section h2 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-section p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
       }
 
       .cta-buttons {
-        flex-direction: column;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: var(--light-text);
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1rem 0;
+      }
+
+      .footer-links a {
+        color: var(--light-text);
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      .footer-links a:hover {
+        opacity: 0.8;
+      }
+
+      .water-droplet {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
         align-items: center;
-      }
-    }
-  </style>
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      position: relative;
-      animation: modalslide 0.3s ease-out;
-    }
-
-    @keyframes modalslide {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
+        justify-content: center;
       }
 
-      to {
-        transform: translateY(0);
-        opacity: 1;
+      .modal-content {
+        background: white;
+        border-radius: 12px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        animation: modalslide 0.3s ease-out;
       }
-    }
 
-    .close-button {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #777;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
+      @keyframes modalslide {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
 
-    .close-button:hover {
-      color: var(--primary-color);
-    }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-    .modal-header {
-      padding: 20px 30px;
-      background: linear-gradient(135deg,
+      .close-button {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #777;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .close-button:hover {
+        color: var(--primary-color);
+      }
+
+      .modal-header {
+        padding: 20px 30px;
+        background: linear-gradient(
+          135deg,
           var(--gradient-start),
-          var(--gradient-end));
-      color: white;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-    }
+          var(--gradient-end)
+        );
+        color: white;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
 
-    .modal-header h3 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
+      .modal-header h3 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
 
-    .modal-body {
-      padding: 30px;
-    }
+      .modal-body {
+        padding: 30px;
+      }
 
-    .modal-body p {
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+      .modal-body p {
+        margin-bottom: 20px;
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+      .form-group {
+        margin-bottom: 20px;
+      }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      color: #444;
-    }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #444;
+      }
 
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: border 0.3s;
-    }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border 0.3s;
+      }
 
-    .form-group input:focus,
-    .form-group select:focus {
-      border-color: var(--primary-color);
-      outline: none;
-    }
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
 
-    .submit-button {
-      background: linear-gradient(135deg,
+      .submit-button {
+        background: linear-gradient(
+          135deg,
           var(--gradient-start),
-          var(--gradient-end));
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      width: 100%;
-      transition: all 0.3s;
-      margin-top: 10px;
-    }
+          var(--gradient-end)
+        );
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s;
+        margin-top: 10px;
+      }
 
-    .submit-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
+      .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
 
-    .modal.show {
-      display: flex;
-    }
+      .modal.show {
+        display: flex;
+      }
 
-    .success-message {
-      text-align: center;
-      padding: 20px;
-    }
+      .success-message {
+        text-align: center;
+        padding: 20px;
+      }
 
-    .success-message svg {
-      width: 60px;
-      height: 60px;
-      color: #2ecc71;
-      margin-bottom: 20px;
-    }
+      .success-message svg {
+        width: 60px;
+        height: 60px;
+        color: #2ecc71;
+        margin-bottom: 20px;
+      }
 
-    .success-message h4 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-  </style>
-  <style>
-    .pricing-section {
-      padding: 5rem 0;
-      background-color: #f0f7ff;
-    }
+      .success-message h4 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+    </style>
+    <style>
+      .pricing-section {
+        padding: 5rem 0;
+        background-color: #f0f7ff;
+      }
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
 
-    .pricing-card {
-      background-color: var(--card-background);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
+      .pricing-card {
+        background-color: var(--card-background);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
 
-    .pricing-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
+      .pricing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
 
-    .pricing-card.featured {
-      border: 2px solid var(--primary-color);
-      transform: scale(1.05);
-    }
-
-    .pricing-card.featured:hover {
-      transform: scale(1.05) translateY(-5px);
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-bottom-left-radius: 8px;
-    }
-
-    .pricing-header {
-      padding: 2rem;
-      background: linear-gradient(135deg,
-          var(--gradient-start),
-          var(--gradient-end));
-      color: white;
-      text-align: center;
-    }
-
-    .pricing-header h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .price {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .price span {
-      font-size: 1rem;
-      font-weight: 400;
-    }
-
-    .pricing-features {
-      padding: 2rem;
-      flex-grow: 1;
-    }
-
-    .pricing-features ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .pricing-features li {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .pricing-features li:before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary-color);
-      font-weight: bold;
-    }
-
-    .pricing-cta {
-      padding: 1rem 2rem 2rem;
-      text-align: center;
-    }
-
-    .pricing-cta .cta-button {
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
       .pricing-card.featured {
-        transform: scale(1);
+        border: 2px solid var(--primary-color);
+        transform: scale(1.05);
       }
 
       .pricing-card.featured:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-bottom-left-radius: 8px;
+      }
+
+      .pricing-header {
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: white;
+        text-align: center;
+      }
+
+      .pricing-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .price span {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .pricing-features {
+        padding: 2rem;
+        flex-grow: 1;
+      }
+
+      .pricing-features ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .pricing-features li {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .pricing-features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+
+      .pricing-cta {
+        padding: 1rem 2rem 2rem;
+        text-align: center;
+      }
+
+      .pricing-cta .cta-button {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .pricing-card.featured {
+          transform: scale(1);
+        }
+
+        .pricing-card.featured:hover {
+          transform: translateY(-5px);
+        }
+      }
+
+      .discount-badge {
+        display: inline-block;
+        background-color: #e74c3c;
+        color: white;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .coming-soon {
+        display: block;
+        color: #777;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        font-style: italic;
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-bottom-left-radius: 8px;
+      }
+
+      .pricing-header {
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        color: white;
+        text-align: center;
+      }
+
+      .pricing-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .price span {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .pricing-cta {
+        margin-top: auto;
+        /* This pushes the CTA to the bottom */
+      }
+
+      .cta-button {
+        background-color: white;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+        padding: 0.8rem 1.2rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.9rem;
+      }
+
+      .cta-button.primary {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      ul.checkmark {
+        list-style: none;
+      }
+
+      ul.checkmark li:before {
+        content: "✓";
+        margin-right: 5px;
+        margin-left: -18px;
+      }
+
+      ul.cross {
+        list-style: none;
+      }
+
+      ul.cross li:before {
+        content: "✘";
+        margin-right: 5px;
+        margin-left: -18px;
+      }
+
+      .use-cases {
+        padding: 5rem 0;
+        background-color: white;
+      }
+
+      .use-cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .use-case-card {
+        background-color: var(--card-background);
+        padding: 2.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        text-align: center;
+        transition: transform 0.3s;
+        border-top: 4px solid var(--primary-color);
+      }
+
+      .use-case-card:hover {
         transform: translateY(-5px);
       }
-    }
 
-    .discount-badge {
-      display: inline-block;
-      background-color: #e74c3c;
-      color: white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+      .use-case-icon {
+        margin-right: 0.5rem;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+      }
 
-    .coming-soon {
-      display: block;
-      color: #777;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-      font-style: italic;
-    }
+      .use-case-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
 
-    .pricing-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-bottom-left-radius: 8px;
-    }
-
-    .pricing-header {
-      padding: 2rem;
-      background: linear-gradient(135deg,
-          var(--gradient-start),
-          var(--gradient-end));
-      color: white;
-      text-align: center;
-    }
-
-    .pricing-header h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .price {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .price span {
-      font-size: 1rem;
-      font-weight: 400;
-    }
-
-    .pricing-cta {
-      margin-top: auto;
-      /* This pushes the CTA to the bottom */
-    }
-
-    .cta-button {
-      background-color: white;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-      padding: 0.8rem 1.2rem;
-      border-radius: 25px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 0.9rem;
-    }
-
-    .cta-button.primary {
-      background-color: var(--primary-color);
-      color: white;
-    }
-
-    ul.checkmark {
-      list-style: none;
-    }
-
-    ul.checkmark li:before {
-      content: '✓';
-      margin-right: 5px;
-      margin-left: -18px;
-    }
-
-    ul.cross {
-      list-style: none;
-    }
-
-    ul.cross li:before {
-      content: '✘';
-      margin-right: 5px;
-      margin-left: -18px;
-    }
-
-    .use-cases {
-  padding: 5rem 0;
-  background-color: white;
-}
-
-.use-cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.use-case-card {
-  background-color: var(--card-background);
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: transform 0.3s;
-  border-top: 4px solid var(--primary-color);
-}
-
-.use-case-card:hover {
-  transform: translateY(-5px);
-}
-
-.use-case-icon {
-  margin-right:0.5rem;
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-}
-
-.use-case-title {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .use-cases {
-    padding: 3rem 0;
-  }
-  
-  .use-case-card {
-    padding: 2rem 1.5rem;
-  }
-}
-  </style>
-  <script>
-    function start() {
-      // Get all the "Get Started" and "Contact Sales" buttons
-      const ctaButtons = document.querySelectorAll(
-        ".pricing-cta"
-      );
-      const modal = document.getElementById("emailModal");
-      const closeButton = document.querySelector(".close-button");
-      const emailForm = document.getElementById("emailForm");
-
-      // Open modal when any pricing button is clicked
-      ctaButtons.forEach((button) => {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-          modal.classList.add("show");
-        });
-      });
-
-      // Close modal when close button is clicked
-      closeButton.addEventListener("click", function () {
-        modal.classList.remove("show");
-      });
-
-      // Close modal when clicking outside the modal content
-      window.addEventListener("click", function (e) {
-        if (e.target === modal) {
-          modal.classList.remove("show");
+      @media (max-width: 768px) {
+        .use-cases {
+          padding: 3rem 0;
         }
-      });
 
-      // Handle form submission
-      emailForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+        .use-case-card {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+    <script>
+      function start() {
+        // Get all the "Get Started" and "Contact Sales" buttons
+        const ctaButtons = document.querySelectorAll(".pricing-cta");
+        const modal = document.getElementById("emailModal");
+        const closeButton = document.querySelector(".close-button");
+        const emailForm = document.getElementById("emailForm");
 
-        const email = document.getElementById("email").value;
-        const company = document.getElementById("company").value;
-        const teamSize = document.getElementById("team-size").value;
-
-        console.log("Email:", email);
-        console.log("Company:", company);
-        console.log("Team Size:", teamSize);
-
-        const data = new FormData(e.target);
-        fetch(event.target.action, {
-          method: emailForm.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
+        // Open modal when any pricing button is clicked
+        ctaButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.classList.add("show");
+          });
         });
 
-        // Show success message
-        const modalBody = document.querySelector(".modal-body");
-        modalBody.innerHTML = `
+        // Close modal when close button is clicked
+        closeButton.addEventListener("click", function () {
+          modal.classList.remove("show");
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.classList.remove("show");
+          }
+        });
+
+        // Handle form submission
+        emailForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const company = document.getElementById("company").value;
+          const teamSize = document.getElementById("team-size").value;
+
+          console.log("Email:", email);
+          console.log("Company:", company);
+          console.log("Team Size:", teamSize);
+
+          const data = new FormData(e.target);
+          fetch(event.target.action, {
+            method: emailForm.method,
+            body: data,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          // Show success message
+          const modalBody = document.querySelector(".modal-body");
+          modalBody.innerHTML = `
           <div class="success-message">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -845,12 +881,12 @@
               </div>
               `;
 
-        // Close modal after 4 seconds
-        setTimeout(function () {
-          modal.classList.remove("show");
-          // Reset form after modal is closed
+          // Close modal after 4 seconds
           setTimeout(function () {
-            modalBody.innerHTML = `
+            modal.classList.remove("show");
+            // Reset form after modal is closed
+            setTimeout(function () {
+              modalBody.innerHTML = `
                   <p>Lubrichat is coming soon! Submit your email to join our waiting list and receive a <strong>30% discount</strong> when we launch.</p>
             <form
               id="emailForm"
@@ -891,732 +927,908 @@
               </button>
             </form>
                             `;
-            // Reattach event listener to the new form
-            document
-              .getElementById("emailForm")
-              .addEventListener("submit", arguments.callee);
-          }, 500);
-        }, 4000);
-      });
-    }
-  </script>
-</head>
+              // Reattach event listener to the new form
+              document
+                .getElementById("emailForm")
+                .addEventListener("submit", arguments.callee);
+            }, 500);
+          }, 4000);
+        });
+      }
+    </script>
+  </head>
 
-<body onload="start();">
-  <header>
-    <div class="container">
-      <nav>
+  <body onload="start();">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+              ></path>
+            </svg>
+            Lubrichat
+          </div>
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#examples">Examples</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+          </div>
+          <a href="#demo" class="cta-button">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Say It. No Drama. Just Results.</h1>
+        <p>
+          Our AI-powered Slack bot anonymizes and refines messages, creating a
+          space where team members can speak honestly without fear of judgment
+          or conflict.
+        </p>
+        <a href="#demo" class="cta-button primary">Start Flowing Today</a>
+      </div>
+    </section>
+
+    <!-- Replace the existing use-cases section with this code -->
+    <section class="use-cases">
+      <div class="container">
+        <h2 class="section-title">Main Use Cases</h2>
+        <p class="section-subtitle">
+          Here's how Lubrichat removes friction from your most important
+          conversations
+        </p>
+
+        <style>
+          .use-case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+            margin-top: 3rem;
+          }
+
+          .use-case-retro {
+            grid-column: span 2;
+            margin-bottom: 2rem;
+          }
+
+          .use-case-content {
+            margin-bottom: 1.5rem;
+          }
+
+          .use-case-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.5rem;
+          }
+
+          .use-case-single-image {
+            width: 100%;
+          }
+
+          .use-case-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+          }
+
+          .use-case-title {
+            margin: 0;
+            margin-left: 0.75rem;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+          }
+
+          .use-case-icon {
+            color: var(--primary-color);
+          }
+
+          .use-case-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+          }
+
+          .use-case-image img:hover {
+            transform: translateY(-5px);
+          }
+
+          @media (max-width: 768px) {
+            .use-case-grid {
+              grid-template-columns: 1fr;
+            }
+
+            .use-case-retro {
+              grid-column: span 1;
+            }
+          }
+        </style>
+
+        <div class="use-case-grid">
+          <!-- Retro Facilitation - spans two columns -->
+          <div class="use-case-retro">
+            <div class="use-case-content">
+              <div class="use-case-header">
+                <div class="use-case-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="use-case-title">Retro Facilitation</h3>
+              </div>
+              <p>
+                Every participant's message is anonymized and made neutral,
+                fueling constructive discussion without personality conflicts.
+                Get to solutions faster by focusing on content, not
+                personalities.
+              </p>
+            </div>
+            <div class="use-case-images">
+              <div class="use-case-image">
+                <div
+                  class="comparison-card"
+                  style="
+                    flex: 1;
+                    min-width: 280px;
+                    background-color: #ffffff;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      padding: 1rem;
+                      text-align: center;
+                      background-color: #e74c3c;
+                      color: white;
+                      font-weight: bold;
+                    "
+                  >
+                    Communication Without Lubrichat
+                  </div>
+                  <img
+                    src="images/without-lubrichat.png"
+                    alt="Retro without Lubrichat"
+                  />
+                </div>
+              </div>
+              <div class="use-case-image">
+                <div
+                  class="comparison-card"
+                  style="
+                    flex: 1;
+                    min-width: 280px;
+                    background-color: #ffffff;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      padding: 1rem;
+                      text-align: center;
+                      background-color: #2e86de;
+                      color: white;
+                      font-weight: bold;
+                    "
+                  >
+                    Communication With Lubrichat
+                  </div>
+                  <img
+                    src="images/with-lubrichat.png"
+                    alt="Retro with Lubrichat"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anonymous Feedback - one column -->
+          <div class="use-case-item">
+            <div class="use-case-content">
+              <div class="use-case-header">
+                <div class="use-case-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"
+                    ></path>
+                    <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                  </svg>
+                </div>
+                <h3 class="use-case-title">Anonymous Feedback</h3>
+              </div>
+              <p>
+                Tired of preparing long questionnaires? Run anonymized
+                interactive feedback sessions with your peers and get faster to
+                the feedback you need. Direct, honest insights without the
+                awkwardness.
+              </p>
+            </div>
+            <div class="use-case-single-image">
+              <div class="use-case-image">
+                <img
+                  src="images/feedback.png"
+                  alt="Anonymous feedback interface"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Assistant - one column -->
+          <div class="use-case-item">
+            <div class="use-case-content">
+              <div class="use-case-header">
+                <div class="use-case-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
+                </div>
+                <h3 class="use-case-title">Personal Assistant</h3>
+              </div>
+              <p>
+                A tone-adjusting companion for your communication. Reduce
+                friction in your messages, ensure clarity, and deliver your
+                points effectively without unnecessary emotion.
+              </p>
+            </div>
+            <div class="use-case-single-image">
+              <div class="use-case-image">
+                <img
+                  src="images/personal.png"
+                  alt="Personal assistant communication tool"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">How Lubrichat Smooths Communication</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Identity Smoothing</h3>
+            <p>
+              Our AI technology polishes message style and tone to ensure
+              complete anonymity, creating a frictionless environment for
+              sharing honest thoughts.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Conversation Fluidity</h3>
+            <p>
+              Automatically removes abrasive language and refines communication
+              tone, keeping discussions flowing productively without emotional
+              snags.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Unlock Hidden Streams</h3>
+            <p>
+              Tap into valuable insights from team members who might otherwise
+              remain silent, creating a flow of ideas from all levels of your
+              organization.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Barrier-Free Collaboration</h3>
+            <p>
+              Create a level communication field where ideas flow based on
+              merit, not hierarchy, leading to more innovative solutions and
+              decisions.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Friction Elimination</h3>
+            <p>
+              Address sensitive topics and resolve internal conflicts without
+              the emotional resistance that typically impedes productive
+              conversation flow.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Enterprise Ready</h3>
+            <p>
+              Secure, scalable, and compliant with industry standards, ensuring
+              your sensitive internal discussions remain protected while flowing
+              freely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="isandisnot">
+      <div class="container">
+        <h2 class="section-title">Is and Is Not</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3 class="feature-title">Lubrichat IS</h3>
+            <div class="row" style="text-align: left; padding: 10px">
+              <ul class="checkmark">
+                <li>
+                  <span
+                    >A tool for clear, efficient, and productive
+                    discussions.</span
+                  >
+                </li>
+                <li>
+                  <span
+                    >A way to avoid unnecessary conflicts and
+                    misinterpretations.</span
+                  >
+                </li>
+                <li>
+                  <span
+                    >A platform for teams who value direct feedback—without
+                    emotional baggage.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">❌</div>
+            <h3 class="feature-title">Lubrichat IS NOT</h3>
+            <div class="row" style="text-align: left; padding: 10px">
+              <ul class="cross">
+                <li>
+                  <span
+                    >A "politeness filter" that forces corporate-speak.</span
+                  >
+                </li>
+                <li>
+                  <span
+                    >A tool for political correctness or watered-down
+                    feedback.</span
+                  >
+                </li>
+                <li>
+                  <span
+                    >Something that stops you from saying what you actually
+                    mean.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section" id="examples">
+      <div class="container">
+        <h2 class="section-title">See How Lubrichat Creates Flow</h2>
+        <p class="section-subtitle">
+          Our AI transforms rough communication into smooth dialogue,
+          maintaining complete anonymity while keeping conversations productive.
+        </p>
+
+        <div class="example-card">
+          <h3 class="example-title">Example 1: Team Culture Discussion</h3>
+          <p>
+            Multiple employees discuss recognition and advancement issues, with
+            varied communication approaches.
+          </p>
+
+          <div class="message-exchange">
+            <div class="message original">
+              <div class="message-label">Original Chat (Rough)</div>
+              <p>
+                <strong>HR Director:</strong> "We're conducting our annual
+                culture survey. Any thoughts on how we can improve team morale?"
+              </p>
+              <p>
+                <strong>Junior Employee:</strong> "The senior team always takes
+                credit for our work and there's obvious favoritism happening.
+                Some people get promoted just because they're friends with
+                management while others work twice as hard and get nothing. It's
+                killing morale."
+              </p>
+              <p>
+                <strong>Marketing Specialist:</strong> "I don't want to cause
+                trouble or anything, but I've noticed the same thing... It feels
+                like some departments are valued more than others, especially
+                when it comes to recognition... just my thought..."
+              </p>
+              <p>
+                <strong>Senior Developer:</strong> "Look, I've been here 8 years
+                and nothing ever changes with these surveys. You're wasting our
+                time asking for feedback you'll ignore anyway."
+              </p>
+              <p>
+                <strong>Team Lead:</strong> "These accusations aren't helpful.
+                We need specific examples, not general complaints."
+              </p>
+            </div>
+
+            <div class="message transformed">
+              <div class="message-label">Lubrichat Transformation (Smooth)</div>
+              <p>
+                <strong>HR Director:</strong> "We're conducting our annual
+                culture survey. Any thoughts on how we can improve team morale?"
+              </p>
+              <p>
+                <strong>Anonymous Contributor 1:</strong> "There appears to be
+                an opportunity to improve recognition practices within our team
+                structure. It would be valuable to implement a more transparent
+                process for acknowledging contributions and considering
+                advancement opportunities based on objective performance
+                metrics."
+              </p>
+              <p>
+                <strong>Anonymous Contributor 2:</strong> "Cross-departmental
+                recognition could be enhanced. Currently, the visibility and
+                appreciation of contributions seems to vary across different
+                teams, which may affect overall perception of organizational
+                fairness."
+              </p>
+              <p>
+                <strong>Anonymous Contributor 3:</strong> "To ensure continued
+                engagement with feedback processes, demonstrating tangible
+                actions taken from previous surveys would build trust in the
+                value of these exercises."
+              </p>
+              <p>
+                <strong>Team Lead:</strong> "These insights are very helpful. We
+                should establish a working group to develop more transparent
+                recognition processes and better communicate actions taken from
+                feedback."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <h3 class="example-title">Example 2: Acquisition Strategy</h3>
+          <p>
+            A discussion where team members at various levels provide critical
+            perspectives on a major decision.
+          </p>
+
+          <div class="message-exchange">
+            <div class="message original">
+              <div class="message-label">Original Chat (Rough)</div>
+              <p>
+                <strong>CEO:</strong> "We're finalizing the acquisition of
+                TechCorp next week. Any last thoughts before we sign?"
+              </p>
+              <p>
+                <strong>Junior Analyst:</strong> "I know I'm just a junior
+                analyst, but I've looked at the numbers and this acquisition is
+                going to be a huge mistake. The technology is outdated and their
+                user base is already declining. I'm afraid to say this in
+                meetings though."
+              </p>
+              <p>
+                <strong>Product Manager:</strong> "Actually... *ahem*... there
+                might be some product overlap issues too... I mean... their
+                product roadmap seems to conflict with ours in several key
+                areas... just something to consider maybe..."
+              </p>
+              <p>
+                <strong>IT Director:</strong> "This is EXACTLY why executives
+                should consult with IT before making these decisions! Their
+                infrastructure is completely incompatible with our systems.
+                Integration will cost twice what you've budgeted and take at
+                least 18 months. But of course, no one asked us."
+              </p>
+              <p>
+                <strong>CFO:</strong> "Those are bold statements. The executive
+                team has thoroughly evaluated this acquisition. Let's stick to
+                facts and not speculation."
+              </p>
+            </div>
+
+            <div class="message transformed">
+              <div class="message-label">Lubrichat Transformation (Smooth)</div>
+              <p>
+                <strong>CEO:</strong> "We're finalizing the acquisition of
+                TechCorp next week. Any last thoughts before we sign?"
+              </p>
+              <p>
+                <strong>Anonymous Team Member 1:</strong> "Based on an analysis
+                of the available data, there are potential concerns regarding
+                the proposed acquisition. The target company's technology stack
+                appears to be approaching obsolescence, and user metrics
+                indicate a downward trend in engagement."
+              </p>
+              <p>
+                <strong>Anonymous Team Member 2:</strong> "A review of the
+                product roadmaps suggests potential overlap in development
+                priorities. This might create inefficiencies if not addressed in
+                the integration planning phase."
+              </p>
+              <p>
+                <strong>Anonymous Team Member 3:</strong> "Technical
+                infrastructure compatibility will require careful assessment.
+                Current estimates suggest integration complexity may exceed
+                initial projections, potentially impacting timelines and
+                resource requirements."
+              </p>
+              <p>
+                <strong>CFO:</strong> "These perspectives are extremely
+                valuable. Let's review the data points raised before proceeding
+                and ensure our integration planning accounts for these potential
+                challenges."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Flexible Pricing Plans</h2>
+        <p class="section-subtitle">
+          Choose the plan that best fits your organization's communication needs
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Starter Plan</h3>
+              <div class="price"><span>coming soon</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 50 lubricated messages per day</li>
+                <li>Core anonymization and tone enhancement</li>
+                <li>Integration with messaging platform (Slack, Teams)</li>
+                <li>Email support</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <div class="discount-badge">FREE</div>
+              <a
+                href="#"
+                class="cta-button cta-starter"
+                data-plan="starter"
+                data-discount="10"
+              >
+                Join Private Beta
+              </a>
+              <span class="coming-soon"
+                >Coming Soon - We'll notify you at launch</span
+              >
+            </div>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Business Plan</h3>
+              <div class="price"><span>coming soon</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Up to 200 lubricated messages per day</li>
+                <li>Analytics and insights</li>
+                <li>Integration with messaging platform (Slack, Teams)</li>
+                <li>Priority support</li>
+                <li>Training with Company Knowledge Base</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <div class="discount-badge">FREE</div>
+              <a
+                href="#"
+                class="cta-button primary cta-business"
+                data-plan="business"
+                data-discount="30"
+              >
+                Join Private Beta
+              </a>
+              <span class="coming-soon"
+                >Coming Soon - We'll notify you at launch</span
+              >
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Enterprise Plan</h3>
+              <div class="price"><span>coming soon</span></div>
+            </div>
+            <div class="pricing-features">
+              <ul>
+                <li>Unlimited lubricated messages</li>
+                <li>Custom anonymization and tone rules</li>
+                <li>Advanced security features (SSO, custom data retention)</li>
+                <li>Dedicated customer success manager</li>
+                <li>Full integration capabilities</li>
+                <li>On-premises option available</li>
+              </ul>
+            </div>
+            <div class="pricing-cta">
+              <div class="discount-badge">FREE</div>
+              <a
+                href="#"
+                class="cta-button cta-enterprise"
+                data-plan="enterprise"
+                data-discount="custom"
+              >
+                Join Private Beta
+              </a>
+              <span class="coming-soon"
+                >Coming Soon - We'll notify you at launch</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="emailModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-header">
+          <h3>Get Early Access Discount</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            We are testing Lubrichat on a small private circle. Join for FREE
+            and get huge benefits after we launch.
+          </p>
+          <form
+            id="emailForm"
+            action="https://formspree.io/f/xpwqvayk"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Your Company"
+              />
+            </div>
+            <div class="form-group">
+              <label for="team-size">Approximate Team Size</label>
+              <select id="team-size" name="team_size">
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201-500">201-500 employees</option>
+                <option value="501+">501+ employees</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-button">
+              Secure My Discount
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS for the pricing table - add this to the style section -->
+
+    <section class="cta-section" id="demo">
+      <div class="container">
+        <h2>Let Communication Flow in Your Organization</h2>
+        <p>
+          Be among the first to experience how Lubrichat can remove barriers and
+          create smooth, productive conversations that drive innovation and
+          improve decision-making.
+        </p>
+
+        <div class="cta-buttons">
+          <a
+            href="https://zcal.co/alberto-lubrichat/30min"
+            target="_blank"
+            class="cta-button"
+            >Book Your Demo Today</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
         <div class="logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <path
-              d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z">
-            </path>
+              d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+            ></path>
           </svg>
           Lubrichat
         </div>
-        <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#examples">Examples</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#about">About</a>
+
+        <div class="footer-links">
+          <a href="privacy.txt">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
         </div>
-        <a href="#demo" class="cta-button">Book a Demo</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>Say It. No Drama. Just Results.</h1>
-      <p>
-        Our AI-powered Slack bot anonymizes and refines messages, creating a space where team members can speak honestly without fear of judgment or conflict.
-      </p>
-      <a href="#demo" class="cta-button primary">Start Flowing Today</a>
-    </div>
-  </section>
-
-<!-- Replace the existing use-cases section with this code -->
-<section class="use-cases">
-  <div class="container">
-    <h2 class="section-title">Main Use Cases</h2>
-    <p class="section-subtitle">
-      Here's how Lubrichat removes friction from your most important
-      conversations
-    </p>
-
-    <style>
-      .use-case-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
-        margin-top: 3rem;
-      }
-      
-      .use-case-retro {
-        grid-column: span 2;
-        margin-bottom: 2rem;
-      }
-      
-      .use-case-content {
-        margin-bottom: 1.5rem;
-      }
-      
-      .use-case-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1.5rem;
-      }
-      
-      .use-case-single-image {
-        width: 100%;
-      }
-      
-      .use-case-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
-      
-      .use-case-title {
-        margin: 0;
-        margin-left: 0.75rem;
-        font-size: 1.6rem;
-        color: var(--primary-color);
-      }
-      
-      .use-case-icon {
-        color: var(--primary-color);
-      }
-      
-      .use-case-image img {
-        width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
-      
-      .use-case-image img:hover {
-        transform: translateY(-5px);
-      }
-      
-      @media (max-width: 768px) {
-        .use-case-grid {
-          grid-template-columns: 1fr;
-        }
-        
-        .use-case-retro {
-          grid-column: span 1;
-        }
-      }
-    </style>
-
-    <div class="use-case-grid">
-      <!-- Retro Facilitation - spans two columns -->
-      <div class="use-case-retro">
-        <div class="use-case-content">
-          <div class="use-case-header">
-            <div class="use-case-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="use-case-title">Retro Facilitation</h3>
-          </div>
-          <p>
-            Every participant's message is anonymized and made neutral,
-            fueling constructive discussion without personality conflicts. Get
-            to solutions faster by focusing on content, not personalities.
-          </p>
-        </div>
-        <div class="use-case-images">
-          <div class="use-case-image">
-            <div class="comparison-card" style="flex: 1; min-width: 280px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
-              <div style="padding: 1rem; text-align: center; background-color: #e74c3c; color: white; font-weight: bold;">
-                Communication Without Lubrichat
-              </div>
-              <img src="images/without-lubrichat.png" alt="Retro without Lubrichat" />
-            </div>
-          </div>
-          <div class="use-case-image">
-            <div class="comparison-card" style="flex: 1; min-width: 280px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
-              <div style="padding: 1rem; text-align: center; background-color: #2e86de; color: white; font-weight: bold;">
-                Communication With Lubrichat
-              </div>
-              <img src="images/with-lubrichat.png" alt="Retro with Lubrichat" />
-            </div>
-          </div>
-        </div>
+        <p>&copy; 2025 Lubrichat. All rights reserved.</p>
       </div>
-
-      <!-- Anonymous Feedback - one column -->
-      <div class="use-case-item">
-        <div class="use-case-content">
-          <div class="use-case-header">
-            <div class="use-case-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"
-                ></path>
-                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="use-case-title">Anonymous Feedback</h3>
-          </div>
-          <p>
-            Tired of preparing long questionnaires? Run anonymized interactive
-            feedback sessions with your peers and get faster to the feedback
-            you need. Direct, honest insights without the awkwardness.
-          </p>
-        </div>
-        <div class="use-case-single-image">
-          <div class="use-case-image">
-            <img src="images/feedback.png" alt="Anonymous feedback interface" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Personal Assistant - one column -->
-      <div class="use-case-item">
-        <div class="use-case-content">
-          <div class="use-case-header">
-            <div class="use-case-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
-              </svg>
-            </div>
-            <h3 class="use-case-title">Personal Assistant</h3>
-          </div>
-          <p>
-            A tone-adjusting companion for your communication. Reduce friction
-            in your messages, ensure clarity, and deliver your points
-            effectively without unnecessary emotion. 
-          </p>
-        </div>
-        <div class="use-case-single-image">
-          <div class="use-case-image">
-            <img
-              src="images/personal.png"
-              alt="Personal assistant communication tool"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <section class="features" id="features">
-    <div class="container">
-      <h2 class="section-title">How Lubrichat Smooths Communication</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Identity Smoothing</h3>
-          <p>
-            Our AI technology polishes message style and tone to ensure
-            complete anonymity, creating a frictionless environment for
-            sharing honest thoughts.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Conversation Fluidity</h3>
-          <p>
-            Automatically removes abrasive language and refines communication
-            tone, keeping discussions flowing productively without emotional
-            snags.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Unlock Hidden Streams</h3>
-          <p>
-            Tap into valuable insights from team members who might otherwise
-            remain silent, creating a flow of ideas from all levels of your
-            organization.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Barrier-Free Collaboration</h3>
-          <p>
-            Create a level communication field where ideas flow based on
-            merit, not hierarchy, leading to more innovative solutions and
-            decisions.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <h3 class="feature-title">Friction Elimination</h3>
-          <p>
-            Address sensitive topics and resolve internal conflicts without
-            the emotional resistance that typically impedes productive
-            conversation flow.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-          </div>
-          <h3 class="feature-title">Enterprise Ready</h3>
-          <p>
-            Secure, scalable, and compliant with industry standards, ensuring
-            your sensitive internal discussions remain protected while flowing
-            freely.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="features" id="isandisnot">
-    <div class="container">
-      <h2 class="section-title">Is and Is Not</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            ✅
-          </div>
-          <h3 class="feature-title">Lubrichat IS</h3>
-          <p>
-          <div class="row" style="text-align: left; padding: 10px;">
-            <ul class="checkmark">
-              <li><span>A tool for clear, efficient, and productive
-                  discussions.</span></li>
-              <li><span>A way to avoid unnecessary conflicts and
-                  misinterpretations.</span>
-              </li>
-              <li><span>A platform for teams who value direct feedback—without
-                  emotional baggage.</span>
-              </li>
-            </ul>
-          </div>
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            ❌
-          </div>
-          <h3 class="feature-title">Lubrichat IS NOT</h3>
-          <p>
-          <div class="row" style="text-align: left; padding: 10px;">
-            <ul class="cross">
-              <li><span>A "politeness filter" that forces
-                corporate-speak.</span></li>
-              <li><span>A tool for political correctness or watered-down
-                feedback.</span>
-              </li>
-              <li><span>Something that stops you from saying what you
-                actually mean.</span>
-              </li>
-            </ul>
-          </div>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="example-section" id="examples">
-    <div class="container">
-      <h2 class="section-title">See How Lubrichat Creates Flow</h2>
-      <p class="section-subtitle">
-        Our AI transforms rough communication into smooth dialogue,
-        maintaining complete anonymity while keeping conversations productive.
-      </p>
-
-      <div class="example-card">
-        <h3 class="example-title">Example 1: Team Culture Discussion</h3>
-        <p>
-          Multiple employees discuss recognition and advancement issues, with
-          varied communication approaches.
-        </p>
-
-        <div class="message-exchange">
-          <div class="message original">
-            <div class="message-label">Original Chat (Rough)</div>
-            <p>
-              <strong>HR Director:</strong> "We're conducting our annual
-              culture survey. Any thoughts on how we can improve team morale?"
-            </p>
-            <p>
-              <strong>Junior Employee:</strong> "The senior team always takes
-              credit for our work and there's obvious favoritism happening.
-              Some people get promoted just because they're friends with
-              management while others work twice as hard and get nothing. It's
-              killing morale."
-            </p>
-            <p>
-              <strong>Marketing Specialist:</strong> "I don't want to cause
-              trouble or anything, but I've noticed the same thing... It feels
-              like some departments are valued more than others, especially
-              when it comes to recognition... just my thought..."
-            </p>
-            <p>
-              <strong>Senior Developer:</strong> "Look, I've been here 8 years
-              and nothing ever changes with these surveys. You're wasting our
-              time asking for feedback you'll ignore anyway."
-            </p>
-            <p>
-              <strong>Team Lead:</strong> "These accusations aren't helpful.
-              We need specific examples, not general complaints."
-            </p>
-          </div>
-
-          <div class="message transformed">
-            <div class="message-label">Lubrichat Transformation (Smooth)</div>
-            <p>
-              <strong>HR Director:</strong> "We're conducting our annual
-              culture survey. Any thoughts on how we can improve team morale?"
-            </p>
-            <p>
-              <strong>Anonymous Contributor 1:</strong> "There appears to be
-              an opportunity to improve recognition practices within our team
-              structure. It would be valuable to implement a more transparent
-              process for acknowledging contributions and considering
-              advancement opportunities based on objective performance
-              metrics."
-            </p>
-            <p>
-              <strong>Anonymous Contributor 2:</strong> "Cross-departmental
-              recognition could be enhanced. Currently, the visibility and
-              appreciation of contributions seems to vary across different
-              teams, which may affect overall perception of organizational
-              fairness."
-            </p>
-            <p>
-              <strong>Anonymous Contributor 3:</strong> "To ensure continued
-              engagement with feedback processes, demonstrating tangible
-              actions taken from previous surveys would build trust in the
-              value of these exercises."
-            </p>
-            <p>
-              <strong>Team Lead:</strong> "These insights are very helpful. We
-              should establish a working group to develop more transparent
-              recognition processes and better communicate actions taken from
-              feedback."
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="example-card">
-        <h3 class="example-title">Example 2: Acquisition Strategy</h3>
-        <p>
-          A discussion where team members at various levels provide critical
-          perspectives on a major decision.
-        </p>
-
-        <div class="message-exchange">
-          <div class="message original">
-            <div class="message-label">Original Chat (Rough)</div>
-            <p>
-              <strong>CEO:</strong> "We're finalizing the acquisition of
-              TechCorp next week. Any last thoughts before we sign?"
-            </p>
-            <p>
-              <strong>Junior Analyst:</strong> "I know I'm just a junior
-              analyst, but I've looked at the numbers and this acquisition is
-              going to be a huge mistake. The technology is outdated and their
-              user base is already declining. I'm afraid to say this in
-              meetings though."
-            </p>
-            <p>
-              <strong>Product Manager:</strong> "Actually... *ahem*... there
-              might be some product overlap issues too... I mean... their
-              product roadmap seems to conflict with ours in several key
-              areas... just something to consider maybe..."
-            </p>
-            <p>
-              <strong>IT Director:</strong> "This is EXACTLY why executives
-              should consult with IT before making these decisions! Their
-              infrastructure is completely incompatible with our systems.
-              Integration will cost twice what you've budgeted and take at
-              least 18 months. But of course, no one asked us."
-            </p>
-            <p>
-              <strong>CFO:</strong> "Those are bold statements. The executive
-              team has thoroughly evaluated this acquisition. Let's stick to
-              facts and not speculation."
-            </p>
-          </div>
-
-          <div class="message transformed">
-            <div class="message-label">Lubrichat Transformation (Smooth)</div>
-            <p>
-              <strong>CEO:</strong> "We're finalizing the acquisition of
-              TechCorp next week. Any last thoughts before we sign?"
-            </p>
-            <p>
-              <strong>Anonymous Team Member 1:</strong> "Based on an analysis
-              of the available data, there are potential concerns regarding
-              the proposed acquisition. The target company's technology stack
-              appears to be approaching obsolescence, and user metrics
-              indicate a downward trend in engagement."
-            </p>
-            <p>
-              <strong>Anonymous Team Member 2:</strong> "A review of the
-              product roadmaps suggests potential overlap in development
-              priorities. This might create inefficiencies if not addressed in
-              the integration planning phase."
-            </p>
-            <p>
-              <strong>Anonymous Team Member 3:</strong> "Technical
-              infrastructure compatibility will require careful assessment.
-              Current estimates suggest integration complexity may exceed
-              initial projections, potentially impacting timelines and
-              resource requirements."
-            </p>
-            <p>
-              <strong>CFO:</strong> "These perspectives are extremely
-              valuable. Let's review the data points raised before proceeding
-              and ensure our integration planning accounts for these potential
-              challenges."
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing-section" id="pricing">
-    <div class="container">
-      <h2 class="section-title">Flexible Pricing Plans</h2>
-      <p class="section-subtitle">
-        Choose the plan that best fits your organization's communication needs
-      </p>
-
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Starter Plan</h3>
-            <div class="price">coming soon</span></div>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li>Up to 50 lubricated messages per day</li>
-              <li>Core anonymization and tone enhancement</li>
-              <li>Integration with messaging platform (Slack, Teams)</li>
-              <li>Email support</li>
-            </ul>
-          </div>
-          <div class="pricing-cta">
-            <div class="discount-badge">FREE</div>
-            <a href="#" class="cta-button cta-starter" data-plan="starter" data-discount="10">
-              Join Private Beta
-            </a>
-            <span class="coming-soon">Coming Soon - We'll notify you at launch</span>
-          </div>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-header">
-            <h3>Business Plan</h3>
-            <div class="price">coming soon</span></div>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li>Up to 200 lubricated messages per day</li>
-              <li>Analytics and insights</li>
-              <li>Integration with messaging platform (Slack, Teams)</li>
-              <li>Priority support</li>
-              <li>Training with Company Knowledge Base</li>
-            </ul>
-          </div>
-          <div class="pricing-cta">
-            <div class="discount-badge">FREE</div>
-            <a href="#" class="cta-button primary cta-business" data-plan="business" data-discount="30">
-              Join Private Beta
-            </a>
-            <span class="coming-soon">Coming Soon - We'll notify you at launch</span>
-          </div>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Enterprise Plan</h3>
-            <div class="price">coming soon</span></div>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li>Unlimited lubricated messages</li>
-              <li>Custom anonymization and tone rules</li>
-              <li>Advanced security features (SSO, custom data retention)</li>
-              <li>Dedicated customer success manager</li>
-              <li>Full integration capabilities</li>
-              <li>On-premises option available</li>
-            </ul>
-          </div>
-          <div class="pricing-cta">
-            <div class="discount-badge">FREE</div>
-            <a href="#" class="cta-button cta-enterprise" data-plan="enterprise" data-discount="custom">
-              Join Private Beta
-            </a>
-            <span class="coming-soon">Coming Soon - We'll notify you at launch</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="emailModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <div class="modal-header">
-        <h3>Get Early Access Discount</h3>
-      </div>
-      <div class="modal-body">
-        <p>
-          We are testing Lubrichat on a small private circle. Join for FREE and get huge benefits after we launch.
-        </p>
-        <form id="emailForm" action="https://formspree.io/f/xpwqvayk" method="POST">
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" name="email" id="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="company">Company Name</label>
-            <input type="text" id="company" name="company" placeholder="Your Company" />
-          </div>
-          <div class="form-group">
-            <label for="team-size">Approximate Team Size</label>
-            <select id="team-size" name="team_size">
-              <option value="1-10">1-10 employees</option>
-              <option value="11-50">11-50 employees</option>
-              <option value="51-200">51-200 employees</option>
-              <option value="201-500">201-500 employees</option>
-              <option value="501+">501+ employees</option>
-            </select>
-          </div>
-          <button type="submit" class="submit-button">
-            Secure My Discount
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- CSS for the pricing table - add this to the style section -->
-
-  <section class="cta-section" id="demo">
-    <div class="container">
-      <h2>Let Communication Flow in Your Organization</h2>
-      <p>
-        Be among the first to experience how Lubrichat can remove barriers and
-        create smooth, productive conversations that drive innovation and
-        improve decision-making.
-      </p>
-
-      <div class="cta-buttons">
-        <a href="https://zcal.co/alberto-lubrichat/30min" target="_blank" class="cta-button">Book Your Demo Today</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z">
-          </path>
-        </svg>
-        Lubrichat
-      </div>
-
-      <div class="footer-links">
-        <a href="privacy.txt">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
-      </div>
-
-      <p>&copy; 2025 Lubrichat. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
